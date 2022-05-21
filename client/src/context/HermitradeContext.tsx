@@ -74,7 +74,7 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 				description: d.description,
 				imageUrl: d.imageUrl,
 			} as Deal)
-		);
+		).sort((a, b) => a.timestamp - b.timestamp);
 		console.log(fetchedDeals);
 		setDeals(fetchedDeals);
 	};
