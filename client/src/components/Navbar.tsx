@@ -56,9 +56,9 @@ const Navbar = () => {
 								Connect wallet
 							</button>
 						) : (
-							<div className="float-right ml-auto mr-5 mt-2">
-								<div className="float-left ml-auto mr-6 ">Connected</div>
-								<div className="float-right ml-auto mr-2 rounded-full p-1 border-2 border-white duration-300 hover:bg-blue-300 hover:px-2">
+							<div className="float-right ml-auto mr-5 mt-1">
+								<div className="float-left ml-auto mr-6 mt-1">Connected</div>
+								<div className="float-right ml-auto mr-2 rounded-full border-2 border-white p-2 bg-[#5494e3]">
 									<BsCheckLg />
 								</div>
 							</div>
