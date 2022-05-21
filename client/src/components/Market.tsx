@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Deal } from "../@types/Deal";
 import { HermitradeContext } from "../context/HermitradeContext";
 
-const DealCard = ({ dealInfo }: { dealInfo: any }) => {
+const DealCard = ({ dealInfo }: { dealInfo: Deal, key: any }) => {
   return (
     <div className="m-1 p-1 border-2 border-slate-400 hover:cursor-pointer shadow-lg rounded-xl">
       <img src={dealInfo.imageUrl} alt="Picture" className="" />
@@ -11,14 +11,13 @@ const DealCard = ({ dealInfo }: { dealInfo: any }) => {
         <br />
         Address: {dealInfo.address}
         <br />
-        Price: {dealInfo.price}
+        Price: {dealInfo.price.toString()}
         <br />
         Item: {dealInfo.item}
         <br />
         Description: {dealInfo.description}
         <br />
-        Date posted:{" "}
-        {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
+        Date posted: {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
       </p>
     </div>
   );
