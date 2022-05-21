@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { Market, Navbar, PostDeal, Welcome } from './components'
 import './App.css'
 
+interface Window {
+  ethereum: any
+}
+
 function App() {
 
   return (
