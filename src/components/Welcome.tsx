@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { ethereum } from 
 
 const Welcome = () => {
 
