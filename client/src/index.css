@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar-bg {
+    background-color: #5abdff;
+    background-image:
+        radial-gradient(at 80% 4%, hsla(216, 89%, 70%, 1) 0px, transparent 50%),
+}
+
+.about-bg {
+    background-color: hsla(203, 88%, 56%, 1);
+    background-image:
+        radial-gradient(at 91% 85%, hsla(220, 91%, 64%, 1) 0px, transparent 50%),
+        radial-gradient(at 13% 75%, hsla(199, 69%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 47% 71%, hsla(225, 82%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 96% 40%, hsla(256, 86%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 28% 8%, hsla(185, 97%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 4% 8%, hsla(278, 91%, 61%, 1) 0px, transparent 50%),
+        radial-gradient(at 25% 62%, hsla(42, 59%, 62%, 1) 0px, transparent 50%);
+}

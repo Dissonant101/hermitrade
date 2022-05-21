@@ -6,7 +6,7 @@ import Logo from "../Hermitrade Logo.svg";
 const Navbar = () => {
   const { currentAccount, connectWallet } = useContext(HermitradeContext);
   return (
-    <div className="sticky navigation w-full font-sans text-xl z-10">
+    <div className="sticky navigation w-full font-sans text-xl z-10 navbar-bg text-white">
       <nav className="navbar navbar-expand navbar-dark bg-dark w-full">
         <div className="container w-full justify-between bg-blue-400">
           <ul className="navbar-nav ml-auto flex flex-wrap items-start justify-start px-2 py-3 align-items-center">
@@ -27,21 +27,21 @@ const Navbar = () => {
             </li>
             <li className="nav-item mx-3;">
               <div className="duration-300 hover:bg-blue-500 rounded-md px-2 py-2">
-                <NavLink className="nav-link" to="/about">
+                <NavLink className="nav-link p-3" to="/about">
                   About
                 </NavLink>
               </div>
             </li>
             <li className="nav-item mx-3">
               <div className="duration-300 hover:bg-blue-500 rounded-md px-2 py-2">
-                <NavLink className="nav-link" to="/market">
+                <NavLink className="nav-link p-3" to="/market">
                   Marketplace
                 </NavLink>
               </div>
             </li>
             <li className="nav-item mx-3">
               <div className="duration-300 hover:bg-blue-500 rounded-md px-2 py-2">
-                <NavLink className="nav-link" to="/post">
+                <NavLink className="nav-link p-3" to="/post">
                   Post Deals
                 </NavLink>
               </div>
