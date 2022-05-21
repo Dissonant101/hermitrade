@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 
 const { ethereum } = window;
 
-const HermitradeContext = createContext({});
+export const HermitradeContext = createContext({}) as any;
 
 export const HermitradeContextProvider = ({ children }: { children: any }) => {
 	const [currentAccount, setCurrentAccount] = useState("");
@@ -38,7 +38,9 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 
 	return (
 		<HermitradeContext.Provider value={{
-			currentAccount
+			currentAccount,
+			connectWallet,
+			sendMoney
 		}}>
 			{children}
 		</HermitradeContext.Provider>
