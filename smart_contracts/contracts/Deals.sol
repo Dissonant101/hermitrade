@@ -7,6 +7,7 @@ contract Deals {
         uint256 timestamp,
         uint256 price,
         string email,
+        string item,
         string description,
         string imageUrl
     );
@@ -16,6 +17,7 @@ contract Deals {
         uint256 timestamp;
         uint256 price;
         string email;
+        string item;
         string description;
         string imageUrl;
     }
@@ -23,9 +25,10 @@ contract Deals {
     uint256 dealCount = 0;
     DealStruct[] unboughtDeals;
 
-    function addDeal(
+    function postDeal(
         uint256 price,
         string memory email,
+        string memory item,
         string memory description,
         string memory imageUrl
     ) public {
@@ -35,6 +38,7 @@ contract Deals {
                 block.timestamp,
                 price,
                 email,
+                item,
                 description,
                 imageUrl
             )
@@ -45,6 +49,7 @@ contract Deals {
             block.timestamp,
             price,
             email,
+            item,
             description,
             imageUrl
         );
