@@ -1,12 +1,17 @@
 import { useState } from 'react'
-import { Navbar } from './components'
+import { Market, Navbar, PostDeal, Welcome } from './components'
 import './App.css'
 
 function App() {
 
   return (
     <h1 className="text-3xl font-bold underline">
-      Hello world!
+      <div>
+        <Navbar />
+        <Welcome />
+      </div>
+      <Market />
+      <PostDeal />
     </h1>
   )
 };
