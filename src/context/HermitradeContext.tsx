@@ -41,18 +41,22 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 	};
 
 	// Sends a specified amount of ETH from your wallet to the specified address
-	const sendMoney = async (addressTo: string, amount: string) => {
+	const purchaseDeal = async (deal: Deal) => {
 		await ethereum.request({
 			method: "eth_sendTransaction",
 			params: [
 				{
 					from: currentAccount,
-					to: addressTo,
+					to: deal.address,
 					gas: "0x5208",
-					value: ethers.utils.parseEther(amount)._hex,
+					value: ethers.utils.parseEther(deal.price.toString())._hex,
 				},
 			],
 		});
+		const contract = createEthereumContract();
+		// Remove the deal from the list so that no one can see it ever again
+		await contract.removeDeal(deal.id);
+		console.log("Purchased deal " + deal.id);
 	};
 
 	const getDeals = async () => {
@@ -63,6 +67,7 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 			({
 				address: d.from,
 				timestamp: d.timestamp,
+				id: d.id,
 				price: d.price * 0.001,
 				email: d.email,
 				item: d.item,
@@ -101,7 +106,7 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 				getDeals,
 				postDeals,
 				connectWallet,
-				sendMoney,
+				sendMoney: purchaseDeal,
 			}}
 		>
 			{children}

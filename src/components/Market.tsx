@@ -2,9 +2,12 @@ import { useContext, useState } from "react";
 import { Deal } from "../@types/Deal";
 import { HermitradeContext } from "../context/HermitradeContext";
 
-const DealCard = ({ dealInfo }: { dealInfo: Deal, key: any }) => {
+const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
+  const { sendMoney } = useContext(HermitradeContext);
+  console.log(dealInfo.timestamp);
+  console.log(new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10));
   return (
-    <div className="m-1 p-1 border-2 border-slate-400 hover:cursor-pointer shadow-lg rounded-xl">
+    <div className="m-1 p-1 border-2 border-slate-400 shadow-lg rounded-xl">
       <img src={dealInfo.imageUrl} alt="Picture" className="" />
       <p>
         Email: {dealInfo.email}
@@ -19,21 +22,25 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal, key: any }) => {
         <br />
         Date posted: {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
       </p>
+      <button onClick={() => {
+        sendMoney(dealInfo);
+
+      }}
+        className="hover:cursor-pointer hover:bg-slate-600 hover:text-gray-200 duration-150 rounded-md px-1.5 py-0.5">
+        Purchase
+      </button>
     </div>
   );
 };
 
 const Market = () => {
-  const { sendMoney } = useContext(HermitradeContext);
 
   const {
     currentAccount,
     deals,
-    getDeals,
   }: {
     currentAccount: string;
     deals: Deal[];
-    getDeals: () => Promise<Deal[]>;
   } = useContext(HermitradeContext);
   // getDeals().then(() => console.log("Finished fetching deals"));
 
