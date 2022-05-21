@@ -1,15 +1,22 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { HermitradeContext } from "../context/HermitradeContext";
 
 const Home = () => {
-  const { currentAccount, connectWallet } = useContext(HermitradeContext)
+
+  useEffect(() => {
+    document.body.classList.add('h-full');
+    document.body.classList.add('m-0');
+    document.body.classList.add('p-0');
+  });
+
   return (
-    <div className="w-full">
-      <h1>Welcome to HermitTrade.</h1>
-      <br />
-      {currentAccount.length == 0 ? (
-        <button type="button" onClick={connectWallet} className="w-20 bg-[#e29608] p-3 m-1 rounded-full">Connect wallet</button>
-      ) : (<div className="m-1 p-1">Wallet connected!</div>)}
+    <div className="container flex h-full bg-[url('https://i.unu.edu/media/ourworld.unu.edu-en/article/8602/e-waste.jpg')] opacity-60 bg-no-repeat bg-cover bg-center">
+      <div className="w-full flex-col absolute text-center justify-center mt-72 text-white opacity-100">
+        <h1 className="text-6xl">Hermitrade</h1>
+        <h4 className="mt-8">Technology owes ecology an apology</h4>
+      </div>
+      
+      
     </div>
   );
 };
