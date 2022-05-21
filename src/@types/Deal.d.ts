@@ -6,10 +6,11 @@
 // string imageUrl;
 
 export interface Deal {
-    address: string,
-    timestamp: number,
-    price: number,
-    email: string,
-    description: string,
-    imageUrl: string
+  address: string;
+  timestamp: number;
+  price: number;
+  email: string;
+  item: string;
+  description: string;
+  imageUrl: string;
 }

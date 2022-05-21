@@ -1,4 +1,5 @@
-import abi from './Deals.json';
+import abi from "./Deals.json";
 
 export const contractAbi = abi.abi; // Hover to see object properties
-export const contractAddress: string = "0xa62D78181053693a591c5234Bb2b01e0fAC40e28";
+export const contractAddress: string =
+  "0x8006927f0AFfF2D356bced130FB9dbc733c54b66";
