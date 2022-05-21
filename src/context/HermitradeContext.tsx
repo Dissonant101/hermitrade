@@ -40,6 +40,7 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 		}
 	};
 
+	// Sends a specified amount of ETH from your wallet to the specified address
 	const sendMoney = async (addressTo: string, amount: string) => {
 		await ethereum.request({
 			method: "eth_sendTransaction",
@@ -62,23 +63,13 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 			({
 				address: d.from,
 				timestamp: d.timestamp,
-				price: d.price,
+				price: d.price * 0.001,
 				email: d.email,
 				item: d.item,
 				description: d.description,
 				imageUrl: d.imageUrl,
 			} as Deal)
 		);
-		fetchedDeals.push({
-			address: "mom",
-			timestamp: 530267476,
-			price: 24,
-			email: "jay.jrjren@gmail.com",
-			item: "bear paw",
-			description: "idk",
-			imageUrl:
-				"https://i5.walmartimages.ca/images/Enlarge/473/991/6000203473991.jpg",
-		});
 		console.log(fetchedDeals);
 		setDeals(fetchedDeals);
 	};
