@@ -5,7 +5,7 @@ import { HermitradeContext } from "../context/HermitradeContext";
 const Navbar = () => {
   const { currentAccount, connectWallet } = useContext(HermitradeContext)
   return (
-    <div className="navigation w-full font-sans text-xl opacity-100">
+    <div className="sticky navigation w-full font-sans text-xl z-10">
       <nav className="navbar navbar-expand navbar-dark bg-dark w-full">
         <div className="container w-full justify-between bg-blue-400">
           <ul className="navbar-nav ml-auto flex flex-wrap items-start justify-start px-2 py-3 align-middle">
