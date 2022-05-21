@@ -11,9 +11,9 @@ const Navbar = () => {
       <nav className="navbar navbar-expand navbar-dark bg-dark w-full">
         <div className="w-full bg-blue-400">
           <ul className="navbar-nav ml-auto flex flex-wrap items-start justify-start px-2 py-3 align-items-center">
-            <li className="mx-3">
+            <li className="ml-5">
               <img
-                src={Logo}
+                src={Logo + "#svgView(viewBox(350.0, 0.0, 610.0, 720.0))"}
                 alt="Hermitrade"
                 style={{ width: 60, height: 45 }}
               />
@@ -57,9 +57,7 @@ const Navbar = () => {
               </button>
             ) : (
               <div className="float-right ml-auto mr-5 mt-2">
-                <div className="float-left ml-auto mr-6 ">
-                  Connected
-                </div>
+                <div className="float-left ml-auto mr-6 ">Connected</div>
                 <div className="float-right ml-auto mr-2 rounded-full p-1 border-2 border-white duration-300 hover:bg-blue-300 hover:px-2">
                   <BsCheckLg />
                 </div>
