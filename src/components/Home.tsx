@@ -20,11 +20,11 @@ const Home = () => {
 
   return (
     <div>
-      <div className="w-full h-full bg-[url('https://i.unu.edu/media/ourworld.unu.edu-en/article/8602/e-waste.jpg')] opacity-60 bg-no-repeat bg-cover bg-center">
+      <div className="w-full h-full home-bg">
         <div className="flex h-full opacity-100 items-center justify-center pt-16">
-          <div className="flex-col text-center justify-center m-60 text-white bg-black bg-opacity-40 shadow-[0_0_20px_40px_rgba(0,0,0,0.4)]">
+          <div className="flex-col text-center justify-center m-60 text-white">
             <h1 className="text-6xl">Hermitrade</h1>
-            <h4 className="mt-8">Technology owes ecology an apology</h4>
+            <h4 className="mt-8">For <strong>all</strong> your electronic needs.</h4>
           </div>
         </div>
       </div>
