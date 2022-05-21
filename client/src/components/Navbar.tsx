@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
 import { HermitradeContext } from "../context/HermitradeContext";
+import { BsCheckLg } from "react-icons/bs";
 import Logo from "../Hermitrade Logo.svg";
 
 const Navbar = () => {
@@ -50,12 +51,19 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={connectWallet}
-                className=" inset-y-0 bg-[#e29608] px-3 py-2 rounded-full float-right mr-2 ml-auto duration-300 hover:bg-[#bd7e0a]"
+                className="inset-y-0 bg-[#e29608] px-8 py-2 rounded-full float-right mr-2 ml-auto duration-300 hover:bg-[#bd7e0a]"
               >
                 Connect wallet
               </button>
             ) : (
-              <div className="m-1 p-1">Wallet connected!</div>
+              <div className="float-right ml-auto mr-5 mt-2">
+                <div className="float-left ml-auto mr-6 ">
+                  Connected
+                </div>
+                <div className="float-right ml-auto mr-2 rounded-full p-1 border-2 border-white duration-300 hover:bg-blue-300 hover:px-2">
+                  <BsCheckLg />
+                </div>
+              </div>
             )}
           </ul>
         </div>
