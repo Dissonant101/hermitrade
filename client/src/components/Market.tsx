@@ -24,6 +24,8 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal, key: any }) => {
 };
 
 const Market = () => {
+  const { sendMoney } = useContext(HermitradeContext);
+
   const {
     currentAccount,
     deals,
@@ -42,7 +44,7 @@ const Market = () => {
         <p>Connect your wallet.</p>
       ) : (
         <div className="grid grid-cols-3">
-          {deals.map((deal: Deal) => (
+          {deals.reverse().map((deal: Deal) => (
             <DealCard dealInfo={deal} key={deal.timestamp + deal.description} />
           ))}
         </div>
