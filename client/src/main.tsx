@@ -1,13 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Home, About, Market, Navbar, PostDeal } from "./components";
+import "./index.css";
 import HermitradeContextProvider from "./context/HermitradeContext";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <HermitradeContextProvider>
     <React.StrictMode>
-      <App />
-    </React.StrictMode >
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/market" element={<Market />} />
+          <Route path="/post" element={<PostDeal />} />
+        </Routes>
+      </Router>
+    </React.StrictMode>
   </HermitradeContextProvider>
-)
+);
