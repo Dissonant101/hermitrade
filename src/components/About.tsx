@@ -12,7 +12,7 @@ const About = () => {
 
 	return (
 		<div>
-			<div className="w-full h-full opacity-100 bg-[url('https://www.ecomena.org/wp-content/uploads/2016/08/e-waste-recycling.jpg')] bg-cover bg-no-repeat bg-center">
+			<div className="w-full h-full opacity-100 bg-[url('https://i.unu.edu/media/ourworld.unu.edu-en/article/8602/e-waste.jpg')] bg-cover bg-no-repeat bg-center">
 				<div className="w-auto flex-col text-center justify-center p-80 text-white bg-black bg-opacity-40">
 					<h1 className="text-6xl">About</h1>
 					<h3 className="mt-8">What is the goal of Hermitrade?</h3>
