@@ -5,6 +5,7 @@ import "./index.css";
 import HermitradeContextProvider from "./context/HermitradeContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <HermitradeContextProvider>
     <React.StrictMode>
