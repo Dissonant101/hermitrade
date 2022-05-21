@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { HermitradeContext } from "../context/HermitradeContext";
 
 const PostDeal = () => {
   return (

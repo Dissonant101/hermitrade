@@ -38,8 +38,8 @@ const Navbar = () => {
                 </NavLink>
               </div>
             </li>
-          {currentAccount.length == 0 ? (
-          <button type="button" onClick={connectWallet} className=" inset-y-0 bg-[#e29608] px-3 py-2 rounded-full float-right mr-2 ml-auto duration-300 hover:bg-[#bd7e0a]">Connect wallet</button>) : (<div className="m-1 p-1">Wallet connected!</div>)}
+            {currentAccount.length == 0 ? (
+              <button type="button" onClick={connectWallet} className=" inset-y-0 bg-[#e29608] px-3 py-2 rounded-full float-right mr-2 ml-auto duration-300 hover:bg-[#bd7e0a]">Connect wallet</button>) : (<div className="m-1 p-1">Wallet connected!</div>)}
           </ul>
         </div>
       </nav>
