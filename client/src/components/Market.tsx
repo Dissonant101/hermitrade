@@ -10,17 +10,17 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
     <div className="m-1 p-1 border-2 border-slate-400 shadow-lg rounded-xl">
       <img src={dealInfo.imageUrl} alt="Picture" className="" />
       <p>
-        Email: {dealInfo.email}
+        <b>Email:</b> {dealInfo.email}
         <br />
-        Address: {dealInfo.address}
+        <b>Address:</b> {dealInfo.address}
         <br />
-        Price: {dealInfo.price.toString()}
+        <b>Price:</b> {dealInfo.price.toString()} ETH
         <br />
-        Item: {dealInfo.item}
+        <b>Item:</b> {dealInfo.item}
         <br />
-        Description: {dealInfo.description}
+        <b>Description:</b> <br /> {dealInfo.description}
         <br />
-        Date posted: {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
+        <b>Date posted:</b> {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
       </p>
       <button onClick={() => {
         sendMoney(dealInfo);
