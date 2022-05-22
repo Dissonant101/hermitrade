@@ -8,11 +8,9 @@ html {
 
 .home-bg {
   background-color: #ff99e5;
-  background-image: radial-gradient(
-      at 3% 88%,
+  background-image: radial-gradient(at 3% 88%,
       hsla(295, 89%, 74%, 1) 0px,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(at 9% 43%, hsla(250, 74%, 79%, 1) 0px, transparent 50%),
     radial-gradient(at 73% 77%, hsla(214, 93%, 76%, 1) 0px, transparent 50%),
     radial-gradient(at 29% 46%, hsla(185, 98%, 68%, 1) 0px, transparent 50%),
@@ -23,11 +21,9 @@ html {
 
 .about-bg {
   background-color: #99ffdb;
-  background-image: radial-gradient(
-      at 7% 95%,
+  background-image: radial-gradient(at 7% 95%,
       hsla(113, 93%, 67%, 1) 0px,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(at 66% 86%, hsla(145, 96%, 62%, 1) 0px, transparent 50%),
     radial-gradient(at 17% 58%, hsla(275, 65%, 71%, 1) 0px, transparent 50%),
     radial-gradient(at 50% 98%, hsla(136, 86%, 78%, 1) 0px, transparent 50%),
@@ -38,11 +34,9 @@ html {
 
 .market-bg {
   background-color: hsla(205, 98%, 65%, 1);
-  background-image: radial-gradient(
-      at 30% 85%,
+  background-image: radial-gradient(at 30% 85%,
       hsla(222, 68%, 68%, 1) 0px,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(at 17% 75%, hsla(106, 96%, 60%, 1) 0px, transparent 50%),
     radial-gradient(at 69% 37%, hsla(181, 99%, 68%, 1) 0px, transparent 50%),
     radial-gradient(at 99% 43%, hsla(136, 69%, 76%, 1) 0px, transparent 50%),
@@ -54,11 +48,9 @@ html {
 
 .post-deals-bg {
   background-color: #99ffd3;
-  background-image: radial-gradient(
-      at 73% 29%,
+  background-image: radial-gradient(at 73% 29%,
       hsla(201, 82%, 75%, 1) 0px,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(at 30% 21%, hsla(283, 76%, 76%, 1) 0px, transparent 50%),
     radial-gradient(at 56% 66%, hsla(139, 100%, 91%, 1) 0px, transparent 50%),
     radial-gradient(at 77% 67%, hsla(267, 86%, 66%, 1) 0px, transparent 50%),
@@ -95,11 +87,6 @@ html {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  margin: 0 auto 0 auto;
-}
-
-#getting-started {
   max-width: 800px;
   margin: 0 auto 0 auto;
 }
