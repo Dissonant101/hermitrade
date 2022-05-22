@@ -22,7 +22,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="bg-[#444]">
       <div className="w-full h-screen home-bg text-center text-white">
         <div className="opacity-100 items-center justify-center sm:py-6 md:py-12 py-3">
           <div className="m-40">
@@ -39,7 +39,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="getting-started">
+      <div id="getting-started" className="text-white">
         <div className="font-bold w-full text-justify pl-20 pr-20 pt-20 pb-5">
           Getting Started
         </div>

@@ -49,6 +49,7 @@ html {
     radial-gradient(at 94% 71%, hsla(42, 61%, 68%, 1) 0px, transparent 50%),
     radial-gradient(at 70% 42%, hsla(283, 77%, 79%, 1) 0px, transparent 50%),
     radial-gradient(at 39% 59%, hsla(153, 96%, 75%, 1) 0px, transparent 50%);
+  min-height: 100vh;
 }
 
 .post-deals-bg {
