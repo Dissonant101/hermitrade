@@ -25,3 +25,36 @@
         radial-gradient(at 4% 8%, hsla(278, 91%, 61%, 1) 0px, transparent 50%),
         radial-gradient(at 25% 62%, hsla(42, 59%, 62%, 1) 0px, transparent 50%);
 }
+
+.post-deals-bg {
+    background-color: #99ffd3;
+    background-image:
+        radial-gradient(at 73% 29%, hsla(201, 82%, 75%, 1) 0px, transparent 50%),
+        radial-gradient(at 30% 21%, hsla(283, 76%, 76%, 1) 0px, transparent 50%),
+        radial-gradient(at 56% 66%, hsla(139, 100%, 91%, 1) 0px, transparent 50%),
+        radial-gradient(at 77% 67%, hsla(267, 86%, 66%, 1) 0px, transparent 50%),
+        radial-gradient(at 16% 77%, hsla(135, 67%, 60%, 1) 0px, transparent 50%),
+        radial-gradient(at 92% 24%, hsla(210, 84%, 61%, 1) 0px, transparent 50%),
+        radial-gradient(at 66% 11%, hsla(295, 84%, 65%, 1) 0px, transparent 50%);
+}
+
+.post-deals-input {
+    background: rgb(39, 51, 89, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    @apply rounded-md p-2 m-1 w-full
+}
+
+.post-deals-container {
+    background: rgb(39, 51, 89, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    @apply pl-3 pr-5 pt-3
+}
