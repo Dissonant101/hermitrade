@@ -21,9 +21,9 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
         {dealInfo.description} <br /> <br />
         <b>Email:</b> {dealInfo.email}
         <br />
-        <b>Address:</b> {dealInfo.address}
+        <b>Address:</b> {`${dealInfo.address.substring(0, 5)}...${dealInfo.address.substring(dealInfo.address.length - 4)}`}
         <br />
-        <b>Price:</b> {dealInfo.price.toString()} ETH
+        <b>Price:</b> {dealInfo.price.toString().substring(0, Math.min(dealInfo.price.toString().length, 6))} ETH
         <br />
         <b>Date posted:</b>{" "}
         {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
