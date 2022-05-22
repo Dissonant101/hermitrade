@@ -6,6 +6,10 @@ import { Deal } from "../@types/Deal";
 const { ethereum } = window;
 
 const createEthereumContract = () => {
+	if (!ethereum) {
+		alert("Please install MetaMask.");
+		return null;
+	}
 	const provider = new ethers.providers.Web3Provider(ethereum);
 	const signer = provider.getSigner();
 	const transactionsContract = new ethers.Contract(
@@ -53,11 +57,14 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 		});
 		const contract = createEthereumContract();
 		// Remove the deal from the list so that no one can see it ever again
-		await contract.removeDeal(deal.id);
+		if (contract) await contract.removeDeal(deal.id);
 	};
 
 	const getDeals = async () => {
 		const contract = createEthereumContract();
+		if (!contract) {
+			return;
+		}
 		const fetchedDeals = ((await contract.getDeals()) as any[])
 			.map(
 				(d: any) =>
@@ -84,6 +91,9 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 		url: string
 	) => {
 		const contract = createEthereumContract();
+		if (!contract) {
+			return;
+		}
 		await contract.postDeal(
 			Math.trunc(parseFloat(price) * 1000),
 			email,
