@@ -9,11 +9,10 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 	return (
 		<div className="glass-morphism justify-center text-center">
 			<img src={dealInfo.imageUrl} alt="Picture" className="mb-5" />
+			<p className="text-2xl"><b>{dealInfo.item}</b></p>
 			<p className="text-center">
-				<b>{dealInfo.item}</b> <br />
-				{dealInfo.description} <br />
-				<b>Email:</b> {dealInfo.email}
-				<br /><br />
+				{dealInfo.description} <br /> <br />
+				<b>Email:</b> {dealInfo.email}<br />
 				<b>Address:</b> {dealInfo.address}
 				<br />
 				<b>Price:</b> {dealInfo.price.toString()} ETH
