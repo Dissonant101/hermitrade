@@ -26,6 +26,18 @@
         radial-gradient(at 70% 21%, hsla(222, 85%, 70%, 1) 0px, transparent 50%);
 }
 
+.market-bg {
+    background-color: hsla(205, 98%, 65%, 1);
+    background-image:
+        radial-gradient(at 30% 85%, hsla(222, 68%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 17% 75%, hsla(106, 96%, 60%, 1) 0px, transparent 50%),
+        radial-gradient(at 69% 37%, hsla(181, 99%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 99% 43%, hsla(136, 69%, 76%, 1) 0px, transparent 50%),
+        radial-gradient(at 94% 71%, hsla(42, 61%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 70% 42%, hsla(283, 77%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 39% 59%, hsla(153, 96%, 75%, 1) 0px, transparent 50%);
+}
+
 .post-deals-bg {
     background-color: #99ffd3;
     background-image:
@@ -38,7 +50,7 @@
         radial-gradient(at 66% 11%, hsla(295, 84%, 65%, 1) 0px, transparent 50%);
 }
 
-.post-deals-input {
+.glass-morphism {
     background: rgb(39, 51, 89, 0.4);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);

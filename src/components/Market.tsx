@@ -7,7 +7,7 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 	console.log(dealInfo.timestamp);
 	console.log(new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10));
 	return (
-		<div className="m-1 p-1 border-2 border-slate-400 shadow-lg rounded-xl">
+		<div className="glass-morphism">
 			<img src={dealInfo.imageUrl} alt="Picture" className="" />
 			<p>
 				<b>Email:</b> {dealInfo.email}
@@ -46,16 +46,19 @@ const Market = () => {
 
 	return (
 		<div>
-			<h1>This is the market page.</h1>
-			{currentAccount.length == 0 ? (
-				<p>Connect your wallet.</p>
-			) : (
-				<div className="grid grid-cols-3">
-					{deals.reverse().map((deal: Deal) => (
-						<DealCard dealInfo={deal} key={deal.timestamp + deal.description} />
-					))}
+			<div className="market-bg px-10 py-20">
+				<div className="">
+					{currentAccount.length == 0 ? (
+						<p className="py-60 text-white font-semibold text-2xl text-center">Connect your wallet to see the market deals.</p>
+					) : (
+						<div className="grid grid-cols-3">
+							{deals.reverse().map((deal: Deal) => (
+								<DealCard dealInfo={deal} key={deal.timestamp + deal.description} />
+							))}
+						</div>
+					)}
 				</div>
-			)}
+			</div>
 		</div>
 	);
 };
