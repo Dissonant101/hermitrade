@@ -5,8 +5,6 @@ import { HermitradeContext } from "../context/HermitradeContext";
 
 const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 	const { sendMoney } = useContext(HermitradeContext);
-	console.log(dealInfo.timestamp);
-	console.log(new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10));
 	const navigate = useNavigate();
 
 	const redirectOnPurchase = () => {
@@ -45,7 +43,6 @@ const Market = () => {
 		currentAccount: string;
 		deals: Deal[];
 	} = useContext(HermitradeContext);
-	// getDeals().then(() => console.log("Finished fetching deals"));
 
 	return (
 		<div>
