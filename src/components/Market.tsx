@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Deal } from "../@types/Deal";
 import { HermitradeContext } from "../context/HermitradeContext";
 
@@ -6,6 +7,11 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 	const { sendMoney } = useContext(HermitradeContext);
 	console.log(dealInfo.timestamp);
 	console.log(new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10));
+	const navigate = useNavigate();
+
+	const redirectOnPurchase = () => {
+		navigate('/');
+	}
 	return (
 		<div className="glass-morphism justify-center text-center">
 			<img src={dealInfo.imageUrl} alt="Picture" className="mb-5" />
@@ -21,6 +27,7 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 			</p>
 			<button onClick={() => {
 				sendMoney(dealInfo);
+				redirectOnPurchase();
 			}}
 				className="hover:cursor-pointer hover:text-gray-200 duration-150 rounded-md px-2 py-1 mt-10 w-64 bg-[#e29608] hover:bg-[#bd7e0a]">
 				Purchase
