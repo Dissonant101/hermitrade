@@ -27,7 +27,7 @@ const DealForm = () => {
 				<input type="text" placeholder="Description" className="glass-morphism" onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
 				<input type="number" placeholder="Price" className="glass-morphism" step="0.01" onChange={(e) => setFormData({ ...formData, price: e.target.value })} />
 				<input type="text" placeholder="Image URL" className="glass-morphism" onChange={(e) => setFormData({ ...formData, url: e.target.value })} />
-				<button className="rounded-full py-2 m-8 w-96 bg-[#e29608]"
+				<button className="rounded-full py-2 m-8 w-96 bg-[#e29608] hover:bg-[#bd7e0a] duration-200"
 					onClick={() =>
 						postDeals(
 							formData.email,
