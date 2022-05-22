@@ -7,26 +7,23 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 	console.log(dealInfo.timestamp);
 	console.log(new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10));
 	return (
-		<div className="glass-morphism">
-			<img src={dealInfo.imageUrl} alt="Picture" className="" />
-			<p>
+		<div className="glass-morphism justify-center text-center">
+			<img src={dealInfo.imageUrl} alt="Picture" className="mb-5" />
+			<p className="text-center">
+				<b>{dealInfo.item}</b> <br />
+				{dealInfo.description} <br />
 				<b>Email:</b> {dealInfo.email}
-				<br />
+				<br /><br />
 				<b>Address:</b> {dealInfo.address}
 				<br />
 				<b>Price:</b> {dealInfo.price.toString()} ETH
-				<br />
-				<b>Item:</b> {dealInfo.item}
-				<br />
-				<b>Description:</b> <br /> {dealInfo.description}
 				<br />
 				<b>Date posted:</b> {new Date(dealInfo.timestamp * 1000).toISOString().substring(0, 10)}
 			</p>
 			<button onClick={() => {
 				sendMoney(dealInfo);
-
 			}}
-				className="hover:cursor-pointer hover:bg-slate-600 hover:text-gray-200 duration-150 rounded-md px-1.5 py-0.5">
+				className="hover:cursor-pointer hover:text-gray-200 duration-150 rounded-md px-2 py-1 mt-10 w-64 bg-[#e29608] hover:bg-[#bd7e0a]">
 				Purchase
 			</button>
 		</div>
