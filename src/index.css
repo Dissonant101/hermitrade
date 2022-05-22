@@ -15,15 +15,15 @@
 }
 
 .about-bg {
-    background-color: hsla(203, 88%, 56%, 1);
+    background-color: #99ffdb;
     background-image:
-        radial-gradient(at 91% 85%, hsla(220, 91%, 64%, 1) 0px, transparent 50%),
-        radial-gradient(at 13% 75%, hsla(199, 69%, 73%, 1) 0px, transparent 50%),
-        radial-gradient(at 47% 71%, hsla(225, 82%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 96% 40%, hsla(256, 86%, 68%, 1) 0px, transparent 50%),
-        radial-gradient(at 28% 8%, hsla(185, 97%, 67%, 1) 0px, transparent 50%),
-        radial-gradient(at 4% 8%, hsla(278, 91%, 61%, 1) 0px, transparent 50%),
-        radial-gradient(at 25% 62%, hsla(42, 59%, 62%, 1) 0px, transparent 50%);
+        radial-gradient(at 7% 95%, hsla(113, 93%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 66% 86%, hsla(145, 96%, 62%, 1) 0px, transparent 50%),
+        radial-gradient(at 17% 58%, hsla(275, 65%, 71%, 1) 0px, transparent 50%),
+        radial-gradient(at 50% 98%, hsla(136, 86%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 89% 45%, hsla(122, 85%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 96% 73%, hsla(239, 84%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 70% 21%, hsla(222, 85%, 70%, 1) 0px, transparent 50%);
 }
 
 .post-deals-bg {
