@@ -13,8 +13,8 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
 		navigate('/');
 	}
 	return (
-		<div className="glass-morphism justify-center text-center">
-			<img src={dealInfo.imageUrl} alt="Picture" className="mb-5" />
+		<div className="glass-morphism justify-center text-center text-white p-16">
+			<img src={dealInfo.imageUrl} alt="Picture" className="mb-5 rounded-md" />
 			<p className="text-2xl"><b>{dealInfo.item}</b></p>
 			<p className="text-center">
 				{dealInfo.description} <br /> <br />
