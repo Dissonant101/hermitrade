@@ -51,7 +51,7 @@ const Market = () => {
 					{currentAccount.length == 0 ? (
 						<p className="py-60 text-white font-semibold text-2xl text-center">Connect your wallet to see the market deals.</p>
 					) : (
-						<div className="grid grid-cols-3">
+						<div className="grid grid-cols-3 gap-11">
 							{deals.reverse().map((deal: Deal) => (
 								<DealCard dealInfo={deal} key={deal.timestamp + deal.description} />
 							))}
