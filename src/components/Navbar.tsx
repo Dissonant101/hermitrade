@@ -26,7 +26,7 @@ const Navbar = () => {
 								</NavLink>
 							</div>
 						</li>
-						<li className="nav-item mx-3;">
+						<li className="nav-item mx-3">
 							<div className="duration-300 hover:bg-blue-500 rounded-md px-2 py-2">
 								<NavLink className="nav-link p-3" to="/about">
 									About
