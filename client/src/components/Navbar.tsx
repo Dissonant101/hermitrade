@@ -5,7 +5,7 @@ import { BsCheckLg } from "react-icons/bs";
 import Logo from "../Hermitrade Logo.svg";
 
 const Navbar = () => {
-	const { currentAccount, connectWallet } = useContext(HermitradeContext);
+	const { currentAccount, connectWallet, getDeals } = useContext(HermitradeContext);
 	return (
 		<div className="navigation w-full font-sans text-xl z-10 navbar-bg text-white">
 			<nav className="navbar navbar-expand navbar-dark bg-dark w-full">
@@ -35,7 +35,7 @@ const Navbar = () => {
 						</li>
 						<li className="nav-item mx-3">
 							<div className="duration-300 hover:bg-blue-500 rounded-md px-2 py-2">
-								<NavLink className="nav-link p-3" to="/market">
+								<NavLink className="nav-link p-3" to="/market" onClick={getDeals()}>
 									Marketplace
 								</NavLink>
 							</div>
