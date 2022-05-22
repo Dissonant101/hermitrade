@@ -18,7 +18,7 @@ const DealForm = () => {
 		price: "",
 		url: "",
 	} as FormData);
-	const { postDeals } = useContext(HermitradeContext);
+	const { postDeals, getDeals } = useContext(HermitradeContext);
 
 	const navigate = useNavigate();
 
@@ -44,6 +44,7 @@ const DealForm = () => {
 								formData.price,
 								formData.url
 							);
+							getDeals();
 							handleSubmit();
 						}
 					}}>
