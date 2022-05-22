@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <div className="bg-[#444]">
-      <div className="w-full h-screen home-bg text-center text-white">
+      <div className="home-bg text-center text-white">
         <div className="opacity-100 items-center justify-center sm:py-6 md:py-12 py-3">
           <div className="m-40">
             <h1 className="text-7xl">Hermitrade</h1>
@@ -38,35 +38,35 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div id="getting-started" className="text-white">
-        <div className="font-bold w-full text-justify pl-20 pr-20 pt-20 pb-5">
-          Getting Started
+        <div id="getting-started" className="text-white pt-48 lg:px-80 md:px-40 sm:px-20">
+          <div className="font-bold w-full text-justify pl-20 pr-20 pt-20 pb-5">
+            Getting Started
+          </div>
+          <ul className="w-full text-justify pl-20 pr-20 pb-20">
+            <li>
+              1. Install MetaMask, a crypto wallet, from{" "}
+              <a target="_blank" href="https://metamask.io/download">
+                https://metamask.io/download
+              </a>
+              .
+            </li>
+            <li>2. Follow the instructions to create a new wallet.</li>
+            <li>
+              3. At the top right, open the networks and click “Show/hide test
+              networks”.
+            </li>
+            <li>4. Enable “Show test networks”.</li>
+            <li>5. Select the Goerli Test Network.</li>
+            <li>
+              6. Connect the wallet with our site by clicking the “Connect Wallet”
+              button at the top right.
+            </li>
+            <li>
+              7. Purchase items inside the Marketplace and post items for sale at
+              Post Deals.
+            </li>
+          </ul>
         </div>
-        <ul className="w-full text-justify pl-20 pr-20 pb-20">
-          <li>
-            1. Install MetaMask, a crypto wallet, from{" "}
-            <a target="_blank" href="https://metamask.io/download">
-              https://metamask.io/download
-            </a>
-            .
-          </li>
-          <li>2. Follow the instructions to create a new wallet.</li>
-          <li>
-            3. At the top right, open the networks and click “Show/hide test
-            networks”.
-          </li>
-          <li>4. Enable “Show test networks”.</li>
-          <li>5. Select the Goerli Test Network.</li>
-          <li>
-            6. Connect the wallet with our site by clicking the “Connect Wallet”
-            button at the top right.
-          </li>
-          <li>
-            7. Purchase items inside the Marketplace and post items for sale at
-            Post Deals.
-          </li>
-        </ul>
       </div>
     </div>
   );
