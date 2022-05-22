@@ -3,70 +3,93 @@
 @tailwind utilities;
 
 .home-bg {
-    background-color: #ff99e5;
-    background-image:
-        radial-gradient(at 3% 88%, hsla(295, 89%, 74%, 1) 0px, transparent 50%),
-        radial-gradient(at 9% 43%, hsla(250, 74%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 73% 77%, hsla(214, 93%, 76%, 1) 0px, transparent 50%),
-        radial-gradient(at 29% 46%, hsla(185, 98%, 68%, 1) 0px, transparent 50%),
-        radial-gradient(at 10% 83%, hsla(272, 79%, 63%, 1) 0px, transparent 50%),
-        radial-gradient(at 23% 63%, hsla(131, 92%, 74%, 1) 0px, transparent 50%),
-        radial-gradient(at 88% 17%, hsla(110, 72%, 79%, 1) 0px, transparent 50%);
+  background-color: #ff99e5;
+  background-image: radial-gradient(
+      at 3% 88%,
+      hsla(295, 89%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 9% 43%, hsla(250, 74%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 73% 77%, hsla(214, 93%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 29% 46%, hsla(185, 98%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 83%, hsla(272, 79%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 23% 63%, hsla(131, 92%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 88% 17%, hsla(110, 72%, 79%, 1) 0px, transparent 50%);
 }
 
 .about-bg {
-    background-color: #99ffdb;
-    background-image:
-        radial-gradient(at 7% 95%, hsla(113, 93%, 67%, 1) 0px, transparent 50%),
-        radial-gradient(at 66% 86%, hsla(145, 96%, 62%, 1) 0px, transparent 50%),
-        radial-gradient(at 17% 58%, hsla(275, 65%, 71%, 1) 0px, transparent 50%),
-        radial-gradient(at 50% 98%, hsla(136, 86%, 78%, 1) 0px, transparent 50%),
-        radial-gradient(at 89% 45%, hsla(122, 85%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 96% 73%, hsla(239, 84%, 68%, 1) 0px, transparent 50%),
-        radial-gradient(at 70% 21%, hsla(222, 85%, 70%, 1) 0px, transparent 50%);
+  background-color: #99ffdb;
+  background-image: radial-gradient(
+      at 7% 95%,
+      hsla(113, 93%, 67%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 66% 86%, hsla(145, 96%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 17% 58%, hsla(275, 65%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 50% 98%, hsla(136, 86%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 89% 45%, hsla(122, 85%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 96% 73%, hsla(239, 84%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 70% 21%, hsla(222, 85%, 70%, 1) 0px, transparent 50%);
 }
 
 .market-bg {
-    background-color: hsla(205, 98%, 65%, 1);
-    background-image:
-        radial-gradient(at 30% 85%, hsla(222, 68%, 68%, 1) 0px, transparent 50%),
-        radial-gradient(at 17% 75%, hsla(106, 96%, 60%, 1) 0px, transparent 50%),
-        radial-gradient(at 69% 37%, hsla(181, 99%, 68%, 1) 0px, transparent 50%),
-        radial-gradient(at 99% 43%, hsla(136, 69%, 76%, 1) 0px, transparent 50%),
-        radial-gradient(at 94% 71%, hsla(42, 61%, 68%, 1) 0px, transparent 50%),
-        radial-gradient(at 70% 42%, hsla(283, 77%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 39% 59%, hsla(153, 96%, 75%, 1) 0px, transparent 50%);
+  background-color: hsla(205, 98%, 65%, 1);
+  background-image: radial-gradient(
+      at 30% 85%,
+      hsla(222, 68%, 68%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 17% 75%, hsla(106, 96%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 69% 37%, hsla(181, 99%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 99% 43%, hsla(136, 69%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 94% 71%, hsla(42, 61%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 70% 42%, hsla(283, 77%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 39% 59%, hsla(153, 96%, 75%, 1) 0px, transparent 50%);
 }
 
 .post-deals-bg {
-    background-color: #99ffd3;
-    background-image:
-        radial-gradient(at 73% 29%, hsla(201, 82%, 75%, 1) 0px, transparent 50%),
-        radial-gradient(at 30% 21%, hsla(283, 76%, 76%, 1) 0px, transparent 50%),
-        radial-gradient(at 56% 66%, hsla(139, 100%, 91%, 1) 0px, transparent 50%),
-        radial-gradient(at 77% 67%, hsla(267, 86%, 66%, 1) 0px, transparent 50%),
-        radial-gradient(at 16% 77%, hsla(135, 67%, 60%, 1) 0px, transparent 50%),
-        radial-gradient(at 92% 24%, hsla(210, 84%, 61%, 1) 0px, transparent 50%),
-        radial-gradient(at 66% 11%, hsla(295, 84%, 65%, 1) 0px, transparent 50%);
+  background-color: #99ffd3;
+  background-image: radial-gradient(
+      at 73% 29%,
+      hsla(201, 82%, 75%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 30% 21%, hsla(283, 76%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 56% 66%, hsla(139, 100%, 91%, 1) 0px, transparent 50%),
+    radial-gradient(at 77% 67%, hsla(267, 86%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 16% 77%, hsla(135, 67%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 92% 24%, hsla(210, 84%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 66% 11%, hsla(295, 84%, 65%, 1) 0px, transparent 50%);
 }
 
 .glass-morphism {
-    background: rgb(39, 51, 89, 0.4);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
 
-    @apply rounded-md p-2 m-1 w-full
+  @apply rounded-md p-2 m-1 w-full;
 }
 
 .post-deals-container {
-    background: rgb(39, 51, 89, 0.4);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    @apply pl-3 pr-5 pt-3
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  @apply pl-3 pr-5 pt-3;
+}
+
+.about-card {
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 0 auto 0 auto;
 }
