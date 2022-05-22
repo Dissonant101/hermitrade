@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { contractAbi, contractAddress } from "../utils/constants";
 import { Deal } from "../@types/Deal";
@@ -24,8 +24,17 @@ const createEthereumContract = () => {
 export const HermitradeContext = createContext({}) as any;
 
 export const HermitradeContextProvider = ({ children }: { children: any }) => {
-	const [currentAccount, setCurrentAccount] = useState("");
+	const [currentAccount, setCurrentAccount] = useState(() => {
+		const saved = localStorage.getItem("currentAccount") as string;
+		const initialValue = saved;
+		return initialValue || "";
+	});
 	const [deals, setDeals] = useState<Deal[]>([]);
+
+	useEffect(() => {
+		localStorage.setItem("currentAccount", currentAccount)
+	}, [currentAccount])
+
 
 	const connectWallet = async () => {
 		try {
@@ -35,6 +44,7 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 				method: "eth_requestAccounts",
 			});
 			setCurrentAccount(accounts[0]);
+
 			await getDeals();
 		} catch (error) {
 			console.log(error);
