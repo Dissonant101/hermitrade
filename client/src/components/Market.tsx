@@ -91,7 +91,7 @@ const Market = () => {
           ) : (
             <div>
               <div className="text-center mb-5">
-                <input
+                <input className="glass-morphism placeholder:text-white text-white"
                   type="text"
                   value={query}
                   placeholder="Search"
