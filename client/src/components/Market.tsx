@@ -7,9 +7,6 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
   const { sendMoney } = useContext(HermitradeContext);
   const navigate = useNavigate();
 
-  const redirectOnPurchase = () => {
-    navigate("/");
-  };
 
   return (
     <div className="glass-morphism justify-center text-center text-white p-16">
@@ -31,7 +28,6 @@ const DealCard = ({ dealInfo }: { dealInfo: Deal }) => {
       <button
         onClick={() => {
           sendMoney(dealInfo);
-          redirectOnPurchase();
         }}
         className="hover:cursor-pointer hover:text-gray-200 duration-150 rounded-md px-2 py-1 mt-10 w-64 bg-[#e29608] hover:bg-[#bd7e0a]"
       >

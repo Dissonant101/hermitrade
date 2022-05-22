@@ -93,6 +93,7 @@ const DealForm = () => {
 };
 
 const PostDeal = () => {
+  const { currentAccount } = useContext(HermitradeContext);
   return (
     <div>
       <div className="p-48 sm:p-10 text-white post-deals-bg">
@@ -110,7 +111,9 @@ const PostDeal = () => {
             </p>
           </div>
           <div className="pl-12">
-            <DealForm />
+            {currentAccount ?
+              (<DealForm />) : (<h1>Connect your wallet to post a deal.</h1>)
+            }
           </div>
         </div>
       </div>
