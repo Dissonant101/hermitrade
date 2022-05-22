@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .home-bg {
   background-color: #ff99e5;
   background-image: radial-gradient(
@@ -90,6 +94,11 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+}
+
+#getting-started {
   max-width: 800px;
   margin: 0 auto 0 auto;
 }

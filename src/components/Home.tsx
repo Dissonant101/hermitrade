@@ -14,28 +14,32 @@ const Home = () => {
   });
 
   useEffect(() => {
-    document.body.classList.add("h-full");
-    document.body.classList.add("m-0");
-    document.body.classList.add("p-0");
-    console.log("hi");
+    window.scrollTo(0, 0);
   }, []);
+
+  const handleClick = () => {
+    document.getElementById("getting-started")?.scrollIntoView();
+  };
 
   return (
     <div>
-      <div className="w-full h-full home-bg text-center text-white">
+      <div className="w-full h-screen home-bg text-center text-white">
         <div className="opacity-100 items-center justify-center sm:py-6 md:py-12 py-3">
-          <div className="m-60">
-            <h1 className="text-6xl">Hermitrade</h1>
-            <h4 className="mt-8">
+          <div className="m-40">
+            <h1 className="text-7xl">Hermitrade</h1>
+            <h4 className="mt-2 text-xl">
               For <strong>all</strong> your electronic needs.
             </h4>
+            <button
+              className="inset-y-0 bg-[#e29608] px-8 py-2 mt-6 rounded-full duration-300 hover:bg-[#bd7e0a]"
+              onClick={handleClick}
+            >
+              Get Started
+            </button>
           </div>
         </div>
-        <div className="opacity-100 items-center justify-center sm:py-6 md:py-12 py-3">
-          <h1 className="text-4xl">Buy & Sell Used Electronics</h1>
-        </div>
       </div>
-      <div>
+      <div id="getting-started">
         <div className="font-bold w-full text-justify pl-20 pr-20 pt-20 pb-5">
           Getting Started
         </div>
