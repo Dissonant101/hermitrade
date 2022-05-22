@@ -8,15 +8,15 @@ const About = () => {
 	'url(https://www.ecomena.org/wp-content/uploads/2016/08/e-waste-recycling.jpg']*/
 
 	return (
-		<div className="w-full h-full">
+		<div>
 			<div className="about-bg">
-				<div className="w-auto flex-col text-center justify-center p-80 text-white">
+				<div className="w-auto text-center justify-center p-80 text-white">
 					<h1 className="text-6xl">About</h1>
 					<h3 className="mt-8">What is the goal of Hermitrade?</h3>
 				</div>
 			</div>
 			<div className="opacity-100 bg-[url('https://i.unu.edu/media/ourworld.unu.edu-en/article/8602/e-waste.jpg')] bg-cover bg-no-repeat">
-				<div className="relative w-full h-full bg-black bg-opacity-60">
+				<div className="w-full h-full bg-black bg-opacity-60">
 					<div className="w-full text-justify pr-20 pl-20 pb-20 pt-20 text-white">
 						<div>Think about the last time one of your devices had to be replaced. How long were you able to use it until it eventually broke? If you said less than a couple of years, then your device is the same as millions of others that’s just going to make its way to the landfill where for nothing.</div> <br />
 
