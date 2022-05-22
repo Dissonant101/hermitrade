@@ -2,88 +2,65 @@ import { useContext, useState } from "react";
 import { HermitradeContext } from "../context/HermitradeContext";
 
 interface FormData {
-  email: string;
-  item: string;
-  description: string;
-  price: string;
-  url: string;
+	email: string;
+	item: string;
+	description: string;
+	price: string;
+	url: string;
 }
 
+const DealForm = () => {
+	const [formData, setFormData] = useState({
+		email: "",
+		item: "",
+		description: "",
+		price: "",
+		url: "",
+	} as FormData);
+	const { postDeals } = useContext(HermitradeContext);
+
+	return (
+		<div>
+			<div className="rounded-lg post-deals-container">
+				<input type="text" placeholder="Email" className="post-deals-input" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+				<input type="text" placeholder="Item Name" className="post-deals-input" onChange={(e) => setFormData({ ...formData, item: e.target.value })} />
+				<input type="text" placeholder="Description" className="post-deals-input" onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
+				<input type="number" placeholder="Price" className="post-deals-input" step="0.01" onChange={(e) => setFormData({ ...formData, price: e.target.value })} />
+				<input type="text" placeholder="Image URL" className="post-deals-input" onChange={(e) => setFormData({ ...formData, url: e.target.value })} />
+				<button className="rounded-full py-2 m-8 w-96 bg-[#e29608]"
+					onClick={() =>
+						postDeals(
+							formData.email,
+							formData.item,
+							formData.description,
+							formData.price,
+							formData.url
+						)
+					}>
+					Submit
+				</button>
+				<br />
+			</div >
+		</div>
+	);
+};
+
 const PostDeal = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    item: "",
-    description: "",
-    price: "",
-    url: "",
-  } as FormData);
-  const { postDeals } = useContext(HermitradeContext);
-  return (
-    <div>
-      <br />
-      <label htmlFor="email">Email:</label>
-      <br />
-      <input
-        type="email"
-        id="email"
-        name="email"
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-      />
-      <br />
-      <label htmlFor="item">Item:</label>
-      <br />
-      <input
-        type="text"
-        id="item"
-        name="item"
-        onChange={(e) => setFormData({ ...formData, item: e.target.value })}
-      />
-      <br />
-      <label htmlFor="description">Description:</label>
-      <br />
-      <input
-        type="text"
-        id="description"
-        name="description"
-        onChange={(e) =>
-          setFormData({ ...formData, description: e.target.value })
-        }
-      />
-      <br />
-      <label htmlFor="price">Price:</label>
-      <br />
-      <input
-        type="text"
-        id="price"
-        name="price"
-        onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-      />
-      <br />
-      <label htmlFor="imageurl">Image URL:</label>
-      <br />
-      <input
-        type="text"
-        id="imageurl"
-        name="imageurl"
-        onChange={(e) => setFormData({ ...formData, url: e.target.value })}
-      />
-      <br />
-      <button
-        onClick={() =>
-          postDeals(
-            formData.email,
-            formData.item,
-            formData.description,
-            formData.price,
-            formData.url
-          )
-        }
-      >
-        Submit
-      </button>
-      <br />
-    </div>
-  );
+	return (
+		<div>
+			<div className="p-48 sm:p-10 text-white post-deals-bg">
+				<div className="mx-40 mt-20 mb-40 grid grid-cols-2 text-2xl">
+					<div className="pr-12 pl-2">
+						<h1 className="text-5xl font-semibold">Sell your used electronics.</h1><br />
+						<p className="">Others will see your posts and contact you.</p><br />
+						<p>Fun fact: The US alone throws away cellphones with <b>$60 million</b> worth of gold/silver <b>yearly</b>.</p>
+					</div>
+					<div className="pl-12">
+						<DealForm />
+					</div>
+				</div>
+			</div></div>
+	)
 };
 
 export default PostDeal;
