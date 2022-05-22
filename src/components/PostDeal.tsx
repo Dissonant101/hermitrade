@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { HermitradeContext } from "../context/HermitradeContext";
 
 interface FormData {
@@ -19,6 +20,12 @@ const DealForm = () => {
 	} as FormData);
 	const { postDeals } = useContext(HermitradeContext);
 
+	const navigate = useNavigate();
+
+	const handleSubmit = () => {
+		navigate('/market');
+	}
+
 	return (
 		<div>
 			<div className="rounded-lg post-deals-container">
@@ -28,15 +35,18 @@ const DealForm = () => {
 				<input type="number" placeholder="Price" className="glass-morphism" step="0.01" onChange={(e) => setFormData({ ...formData, price: e.target.value })} />
 				<input type="text" placeholder="Image URL" className="glass-morphism" onChange={(e) => setFormData({ ...formData, url: e.target.value })} />
 				<button className="rounded-full py-2 m-8 w-96 bg-[#e29608] hover:bg-[#bd7e0a] duration-200"
-					onClick={() =>
-						postDeals(
-							formData.email,
-							formData.item,
-							formData.description,
-							formData.price,
-							formData.url
-						)
-					}>
+					onClick={() => {
+						if (formData.email != "" && formData.item != "" && formData.description != "" && formData.price != "" && formData.url != "") {
+							postDeals(
+								formData.email,
+								formData.item,
+								formData.description,
+								formData.price,
+								formData.url
+							);
+							handleSubmit();
+						}
+					}}>
 					Submit
 				</button>
 				<br />
