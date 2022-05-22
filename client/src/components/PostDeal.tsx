@@ -22,11 +22,11 @@ const DealForm = () => {
 	return (
 		<div>
 			<div className="rounded-lg post-deals-container">
-				<input type="text" placeholder="Email" className="post-deals-input" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-				<input type="text" placeholder="Item Name" className="post-deals-input" onChange={(e) => setFormData({ ...formData, item: e.target.value })} />
-				<input type="text" placeholder="Description" className="post-deals-input" onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
-				<input type="number" placeholder="Price" className="post-deals-input" step="0.01" onChange={(e) => setFormData({ ...formData, price: e.target.value })} />
-				<input type="text" placeholder="Image URL" className="post-deals-input" onChange={(e) => setFormData({ ...formData, url: e.target.value })} />
+				<input type="text" placeholder="Email" className="glass-morphism" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+				<input type="text" placeholder="Item Name" className="glass-morphism" onChange={(e) => setFormData({ ...formData, item: e.target.value })} />
+				<input type="text" placeholder="Description" className="glass-morphism" onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
+				<input type="number" placeholder="Price" className="glass-morphism" step="0.01" onChange={(e) => setFormData({ ...formData, price: e.target.value })} />
+				<input type="text" placeholder="Image URL" className="glass-morphism" onChange={(e) => setFormData({ ...formData, url: e.target.value })} />
 				<button className="rounded-full py-2 m-8 w-96 bg-[#e29608]"
 					onClick={() =>
 						postDeals(
