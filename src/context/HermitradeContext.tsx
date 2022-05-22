@@ -35,7 +35,6 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 		localStorage.setItem("currentAccount", currentAccount)
 	}, [currentAccount])
 
-
 	const connectWallet = async () => {
 		try {
 			if (!ethereum) return alert("Please install MetaMask.");
@@ -71,6 +70,10 @@ export const HermitradeContextProvider = ({ children }: { children: any }) => {
 	};
 
 	const getDeals = async () => {
+		const provider = new ethers.providers.Web3Provider(ethereum);
+		if (!(await provider.listAccounts()).length) {
+			setCurrentAccount("");
+		}
 		const contract = createEthereumContract();
 		if (!contract) {
 			return;
